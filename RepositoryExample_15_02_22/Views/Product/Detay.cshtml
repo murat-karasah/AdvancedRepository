@@ -1,0 +1,18 @@
+﻿@model RepositoryExample_15_02_22.Models.ProductsModel
+@{
+	ViewBag.Title = "Detay";
+}
+
+<dl>
+	<dt>@Html.DisplayNameFor(x => x.products.ProductID)</dt>
+	<dd>@Html.DisplayFor(x => x.products.ProductID)</dd>
+	<dt>@Html.DisplayNameFor(x => x.products.ProductName)</dt>
+	<dd>@Html.DisplayFor(x => x.products.ProductName)</dd>
+	<dt>@Html.DisplayNameFor(x => x.products.QuantityPerUnit)</dt>
+	<dd>@Html.DisplayFor(x => x.products.QuantityPerUnit)</dd>
+</dl>
+<br />
+<div class="form-group">
+	<a href="/Product/Index" class="btn btn-success">Listeye Geri Don</a>
+</div>
+

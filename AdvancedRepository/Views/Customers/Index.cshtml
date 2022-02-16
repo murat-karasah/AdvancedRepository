@@ -1,0 +1,45 @@
+﻿@model AdvancedRepository.Models.CustomerModel
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@*<form action="/Customers/Index" method="post">
+    <input type="text" placeholder="Ara.." name="name">
+    <button type="submit" class="btn btn-success">Arama</button>
+</form>*@
+<hr />
+
+@*<a href="/Customers/Ekle" class="btn btn-info">Kategori Ekle</a>
+<a href="/Customers/Sec" class="btn btn-warning ">Kategori Sec</a>*@
+<div class="container">
+    <div class="row">
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th>@Html.DisplayNameFor(x => x.Customers.CustomerID)</th>
+                    <th>@Html.DisplayNameFor(x => x.Customers.CompanyName)</th>
+                    <th>@Html.DisplayNameFor(x => x.Customers.ContactName)</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                @foreach (var item in Model.cList)
+                {
+                    <tr>
+                        <td>@item.CustomerID</td>
+                        <td>@item.CompanyName</td>
+                        <td>@item.ContactName</td>
+                        <td> <a href="/Customers/Detay/@item.CustomerID" class="btn btn-success">Detay</a></td>
+                        <td> <a href="/Customers/Guncelle/@item.CustomerID" class="btn btn-primary">Güncelle</a></td>
+                        <td> <a href="/Customers/Sil/@item.CustomerID" class="btn btn-danger">Sil</a></td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

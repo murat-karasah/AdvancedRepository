@@ -1,0 +1,32 @@
+﻿@model RepositoryExample_15_02_22.Models.ProductsModel
+@{
+	ViewBag.Title = "Sec";
+}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>@Html.LabelFor(x => x.products.ProductID)</th>
+			<th>@Html.LabelFor(x => x.products.ProductID)</th>
+			<th>@Html.LabelFor(x => x.products.ProductID)</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.pList)
+		{
+			<tr>
+				<td>@item.ProductID</td>
+				<td>@item.ProductName</td>
+				<td>@item.QuantityPerUnit</td>
+			</tr>
+
+		}
+	</tbody>
+
+</table>
+<br />
+<div class="form-group">
+	<a href="/Product/Index" class="btn btn-success">Listeye Geri Don</a>
+</div>
+
+
